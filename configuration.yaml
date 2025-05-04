@@ -1,0 +1,4 @@
+...
+
+rest: !include_dir_merge_list rest
+rest_command: !include_dir_merge_named rest_command
