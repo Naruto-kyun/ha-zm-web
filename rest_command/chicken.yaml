@@ -1,0 +1,5 @@
+  relay:
+    url: "http://IP/relay.cgi?relay{{ action }}{{ relay }}={{ action }}"
+    username: "USER"
+    password: "PASSWORD"
+    verify_ssl: false
