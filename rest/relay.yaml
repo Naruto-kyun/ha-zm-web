@@ -1,0 +1,100 @@
+  - resource: http://USER:PASSWORD@IP/state.cgi
+    method: GET
+    scan_interval: 1
+    binary_sensor:
+      - name: Relay Output 1
+        unique_id: relay_output_1
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][0]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][0] }}
+      - name: Relay Output 2
+        unique_id: relay_output_2
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][1]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][1] }}
+      - name: Relay Output 3
+        unique_id: relay_output_3
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][2]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][2] }}
+      - name: Relay Output 4
+        unique_id: relay_output_4
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][3]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][3] }}
+      - name: Relay Output 5
+        unique_id: relay_output_5
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][4]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][4] }}
+      - name: Relay Output 6
+        unique_id: relay_output_6
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][5]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][5] }}
+      - name: Relay Output 7
+        unique_id: relay_output_7
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][6]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][6] }}
+      - name: Relay Output 8
+        unique_id: relay_output_8
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[0][7]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[0][7] }}
+      - name: Relay Input 1
+        unique_id: relay_input_1
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][0]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][0] }}
+      - name: Relay Input 2
+        unique_id: relay_input_2
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][1]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][1] }}
+      - name: Relay Input 3
+        unique_id: relay_input_3
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][2]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][2] }}
+      - name: Relay Input 4
+        unique_id: relay_input_4
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][3]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][3] }}
+      - name: Relay Input 5
+        unique_id: relay_input_5
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][4]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][4] }}
+      - name: Relay Input 6
+        unique_id: relay_input_6
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][5]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][5] }}
+      - name: Relay Input 7
+        unique_id: relay_input_7
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][6]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][6] }}
+      - name: Relay Input 8
+        unique_id: relay_input_8
+        availability: >
+          {{ is_number((value | regex_findall(find='"output":"(\d+)"'))[1][7]) }}
+        value_template: >
+          {{ (value | regex_findall(find='"output":"(\d+)"'))[1][7] }}
